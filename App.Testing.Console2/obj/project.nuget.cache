@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "yQY0C965mzbnwX+kEnDfEaftUoBUvpQmhOli+cWpfkPTPnQG2+nOLV0gIfBt6DxKXNI4hF5rvY+O/B5CAY5DvQ==",
+  "success": true,
+  "projectFilePath": "D:\\Tutorial IT 2022\\Project\\.Net Core\\LearnWebApplicationAPI\\App.Testing.Console2\\App.Testing.Console2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Yudha\\.nuget\\packages\\microsoft.jsinterop\\5.0.15\\microsoft.jsinterop.5.0.15.nupkg.sha512",
+    "C:\\Users\\Yudha\\.nuget\\packages\\system.net.http.json\\6.0.0\\system.net.http.json.6.0.0.nupkg.sha512",
+    "C:\\Users\\Yudha\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Yudha\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\Yudha\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,62 @@
+﻿
+@page "/tickets/{ticketId:int}"
+
+
+
+@attribute [Authorize]
+
+@inject NavigationManager NavigationManager
+@inject ITicketsScreenUseCases TicketsScreenUseCases
+
+<h3>TicketComponent</h3>
+<br />
+
+@if (ticket != null)
+{
+        <EditForm Model="ticket" OnValidSubmit="Save">
+            <DataAnnotationsValidator></DataAnnotationsValidator>
+            <ValidationSummary></ValidationSummary>
+
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <InputText  class="form-control" id="title" @bind-Value="ticket.Title"></InputText>
+            </div>
+            <div class="mb-3"   >
+              <label for="description" class="form-label">Description</label>
+              <InputText  cla   ss="form-control" id="description" @bind-Value="ticket.Description"></InputText>
+            </div>
+            <div class="mb-3">
+              <label for="owner" class="form-label">Owner</label>
+              <InputText  class="form-control" id="owner" @bind-Value="ticket.Owner" readonly></InputText>
+            </div>
+                <div class="mb-3">
+                    <label for="reportdate" class="form-label">Report Date</label>
+                        <InputDate  class="form-control" id="reportdate" @bind-Value="ticket.ReportDate"></InputDate>
+                </div>
+            <div class="mb-3">
+              <label for="duedate" class="form-label">Due Date</label>
+              <InputDate  class="form-control" id="duedate" @bind-Value="ticket.DueDate"></InputDate>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Save</button>
+        </EditForm>
+
+
+}
+
+@code {
+    Ticket ticket;
+
+    [Parameter]
+    public int TicketId { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        ticket = await TicketsScreenUseCases.ViewTicketById(TicketId);
+    }
+
+    void Save()
+    {
+
+    }
+}
